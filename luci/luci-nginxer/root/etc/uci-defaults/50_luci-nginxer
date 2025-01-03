@@ -15,4 +15,10 @@ if [ "$nginxer" != 1 ]; then
     # /etc/init.d/uhttpd running || /etc/init.d/uhttpd disable
     /etc/init.d/nginx reload
 fi
+# 设置默认主题
+uci set luci.main.mediaurlbase='/luci-static/argon'   # 设置主题的路径
+uci set luci.main.themes='luci-theme-argon'              # 设置默认主题
+uci commit luci
+/etc/init.d/nginx reload
+
 exit 0
