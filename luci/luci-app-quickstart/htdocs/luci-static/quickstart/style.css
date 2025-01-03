@@ -3253,9 +3253,15 @@ em[data-v-08006dd5] {
 }
 
 .app-container_status-label .app-container_status-label_item[data-v-08006dd5] {
-    flex: 0 0 50%;
-    max-width: 50%
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 0!important;
 }
+
+.app-container_status-label_item:first-of-type {
+    display: none;
+}
+  
 
 .app-container_status-label_block[data-v-08006dd5] {
     display: block;
